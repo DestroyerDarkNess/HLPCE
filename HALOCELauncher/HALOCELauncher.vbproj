@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5483309A-1BD8-41A4-8394-31A5366207C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>HALOCELauncher.My.MyApplication</StartupObject>
+    <RootNamespace>HALOCELauncher</RootNamespace>
+    <AssemblyName>HALOCELauncher</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>HALOCELauncher.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>HALOCELauncher.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>image.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\Visual Studio 2012\Projects\Guna Examples\Guna\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\Xylon\Xylon\bin\Debug\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\AnimaTheme.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BoosterTheme.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\AboutForm.Designer.vb">
+      <DependentUpon>AboutForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\AboutForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\Home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\Modsfrm.Designer.vb">
+      <DependentUpon>Modsfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\Modsfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\Servers.Designer.vb">
+      <DependentUpon>Servers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\Servers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\Settingfrm.Designer.vb">
+      <DependentUpon>Settingfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\Settingfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\HelpersXylos.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MenuStripZControl.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PanelFX\PanelFX.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerTap\AddCustomServer.Designer.vb">
+      <DependentUpon>AddCustomServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerTap\AddCustomServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerTap\FavoritiesC.Designer.vb">
+      <DependentUpon>FavoritiesC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerTap\FavoritiesC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerTap\InternetC.Designer.vb">
+      <DependentUpon>InternetC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerTap\InternetC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerTap\LoadingC.Designer.vb">
+      <DependentUpon>LoadingC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerTap\LoadingC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerTap\sv_control.Designer.vb">
+      <DependentUpon>sv_control.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerTap\sv_control.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ThemeModule.vb" />
+    <Compile Include="Controls\TransparentListView.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\AntiFlicker\IBufferedControl.vb" />
+    <Compile Include="Core\AntiFlicker\Win32FX.vb" />
+    <Compile Include="Core\FakeFullScreen\SetWindowState.vb" />
+    <Compile Include="Core\FakeFullScreen\SetWindowStyle.vb" />
+    <Compile Include="Core\Launcher.vb" />
+    <Compile Include="Core\SvManager\SvFormatManager.vb" />
+    <Compile Include="Core\Font\CustomFont.vb" />
+    <Compile Include="Core\GameTracker\GTAPI.vb" />
+    <Compile Include="Core\Utils\FileDirSearcher.vb" />
+    <Compile Include="Core\Utils\HtmlAgilityFuncs.vb" />
+    <Compile Include="Core\HaloQuery\HaloServer.vb" />
+    <Compile Include="Core\HaloQuery\HaloServerInfo.vb" />
+    <Compile Include="Core\Helpers.vb" />
+    <Compile Include="Core\Time\TimeMeasurer.vb" />
+    <Compile Include="Core\Utils\BlurEffect.vb" />
+    <Compile Include="Core\Utils\Compression.vb" />
+    <Compile Include="Core\Utils\ControlDragger.vb" />
+    <Compile Include="Core\Utils\GetBlurBitmap.vb" />
+    <Compile Include="Core\Utils\LogFuncs.vb" />
+    <Compile Include="Core\Utils\RegEdit.vb" />
+    <Compile Include="Core\Utils\XMLHelper.vb" />
+    <Compile Include="DestroyerCore\AntiAnalysis\MainAnalysis.vb" />
+    <Compile Include="DestroyerCore\AntiDebug\MainDebug.vb" />
+    <Compile Include="DestroyerCore\AntiDump\MainDump.vb" />
+    <Compile Include="DestroyerCore\AntiVirtualMachine\MainVM.vb" />
+    <Compile Include="DestroyerCore\AntiVirtualMachine\OldAntiVM.vb" />
+    <Compile Include="DestroyerCore\DestroyerProtect.vb" />
+    <Compile Include="DestroyerCore\DirAnalysis\MainDirScan.vb" />
+    <Compile Include="DestroyerCore\Exploits.vb" />
+    <Compile Include="DestroyerCore\Utils.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\Modsfrm.resx">
+      <DependentUpon>Modsfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\Servers.resx">
+      <DependentUpon>Servers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\Settingfrm.resx">
+      <DependentUpon>Settingfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerTap\AddCustomServer.resx">
+      <DependentUpon>AddCustomServer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerTap\FavoritiesC.resx">
+      <DependentUpon>FavoritiesC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerTap\InternetC.resx">
+      <DependentUpon>InternetC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerTap\LoadingC.resx">
+      <DependentUpon>LoadingC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerTap\sv_control.resx">
+      <DependentUpon>sv_control.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halo Outline.ttf" />
+    <None Include="Resources\Halo.ttf" />
+    <None Include="Resources\thumb-1920-900258.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1790160475_preview_HaloCollectionCover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
