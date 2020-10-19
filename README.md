@@ -1,9 +1,9 @@
 # HLPCE
 
+![IconA](https://i.ibb.co/XjvH42T/resized1.png)
+
 ## Introduction
 HLPCE is a Launcher & Server Browser for Halo CE and PC.
-
-![IconA](https://i.ibb.co/XjvH42T/resized1.png)
 
 ## Features
 
