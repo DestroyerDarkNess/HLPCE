@@ -6,11 +6,11 @@
 
 ## Introduction
 HLPCE is a Launcher & Server Browser for Halo CE and PC.
-
-
-
-
 ![]() 
+
+
+
+
 
 ## Features
 
