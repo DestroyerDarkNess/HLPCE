@@ -1,5 +1,5 @@
 # HLPCE
-![passing](https://img.shields.io/badge/build-passing-brightgreen) ![Licence](https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue) ![Version](https://img.shields.io/badge/build-passing-brightgreen)
+![passing](https://img.shields.io/badge/build-passing-brightgreen) ![Licence](https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue) ![Version](https://img.shields.io/badge/Realse-v1.0.3-blue)
 
 ![IconAEX](https://i.ibb.co/XjvH42T/resized1.png)
 
