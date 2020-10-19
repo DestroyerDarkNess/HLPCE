@@ -1,7 +1,9 @@
 # HLPCE
 ![passing](https://img.shields.io/badge/build-passing-brightgreen) ![Licence](https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue) ![Version](https://img.shields.io/badge/Realse-v1.0.3-blue)
 
-<div align=”center”> ![IconAEX](https://i.ibb.co/XjvH42T/resized1.png) </div>
+<div align=”center”> 
+ ![IconAEX](https://i.ibb.co/XjvH42T/resized1.png) 
+</div>
 
 ## Introduction
 HLPCE is a Launcher & Server Browser for Halo CE and PC.
