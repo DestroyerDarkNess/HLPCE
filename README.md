@@ -1,4 +1,5 @@
 # HLPCE
+![passing](https://img.shields.io/badge/build-passing-brightgreen) ![Licence](https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue) ![Version](https://img.shields.io/badge/build-passing-brightgreen)
 
 ![IconAEX](https://i.ibb.co/XjvH42T/resized1.png)
 
@@ -29,9 +30,12 @@ HLPCE is a Launcher & Server Browser for Halo CE and PC.
 
  ## Contributors
 - Destroyer : Creator and Developer.  / Discord : Destroyer#8328
+- I would appreciate if you also contribute :)
 
   ## Special thanks :
 - [ElektroStudios](https://github.com/ElektroStudios): For its Snippet and other Functions.
+
+
 
  ## Preview :
 
