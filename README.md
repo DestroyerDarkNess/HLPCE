@@ -12,6 +12,8 @@ HLPCE is a Launcher & Server Browser for Halo CE and PC.
 
 Remember to leave your Star to the Project! Thank you!
 
+If you like my work and want to support it, then please consider to deposit a donation through Paypal by clicking on the next link: [www.paypal.me/SalvadorKrilewski](https://www.paypal.me/SalvadorKrilewski)
+
 ![]()
 
 ![]() 
