@@ -2,7 +2,7 @@
 
 Public Class AboutForm
 
-    Private WelcomeMessage As String = "Ego sum Deus ex spatio, tempore, Energy."
+    Private WelcomeMessage As String = "----------Delete"
 
     Public Shared ReadOnly _textToDisplay As String =
 <a><![CDATA[ Create By EternalSoft
