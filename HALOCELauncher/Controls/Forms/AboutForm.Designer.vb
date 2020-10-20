@@ -77,7 +77,7 @@ Partial Class AboutForm
         Me.LabelTextLog.Name = "LabelTextLog"
         Me.LabelTextLog.Size = New System.Drawing.Size(432, 175)
         Me.LabelTextLog.TabIndex = 2
-        Me.LabelTextLog.Text = "Ego sum Deus ex spatio, tempore, Energy."
+        Me.LabelTextLog.Text = "----------Delete"
         Me.LabelTextLog.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'GunaControlBox1
