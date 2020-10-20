@@ -11,7 +11,7 @@
 HLPCE is a Launcher & Server Browser for Halo CE and PC.
 
 Remember to leave your Star to the Project! Thank you!
-Official Post: 
+Official Post:                    
 [Halo Launcher for PC and CE [HLPCE] | Realses](https://opencarnage.net/index.php?/topic/8139-halo-launcher-for-pc-and-ce-hlpce-realses/)
 
 If you like my work and want to support it, then please consider to deposit a donation through Paypal by clicking on the next link: [www.paypal.me/SalvadorKrilewski](https://www.paypal.me/SalvadorKrilewski)
