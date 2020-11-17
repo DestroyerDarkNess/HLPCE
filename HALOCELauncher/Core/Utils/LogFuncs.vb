@@ -13,6 +13,11 @@
             None
         End Enum
 
+        Public Shared Sub DeleteLog()
+            If IO.File.Exists(LogFile) Then
+                IO.File.Delete(LogFile)
+            End If
+        End Sub
 
         Public Shared Function WriteLog(ByVal Message As String, Optional ByVal InfoType As InfoType = LogFuncs.InfoType.None) As Boolean
 

@@ -22,8 +22,16 @@ Partial Class Home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
         Me.Anuncio4 = New Guna.UI.WinForms.GunaPanel()
+        Me.GunaPanel8 = New Guna.UI.WinForms.GunaPanel()
+        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
+        Me.HaloLaunchPC = New Guna.UI.WinForms.GunaButton()
+        Me.GunaPanel9 = New Guna.UI.WinForms.GunaPanel()
+        Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
+        Me.HaloLaunchCE = New Guna.UI.WinForms.GunaButton()
         Me.Anuncio3 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaPanel3 = New Guna.UI.WinForms.GunaPanel()
         Me.Anuncio3Des = New Guna.UI.WinForms.GunaLabel()
@@ -42,7 +50,11 @@ Partial Class Home
         Me.Anuncio1Title = New Guna.UI.WinForms.GunaLabel()
         Me.GunaPanel7 = New Guna.UI.WinForms.GunaPanel()
         Me.Anuncio1Icon = New Guna.UI.WinForms.GunaPanel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GunaPanel1.SuspendLayout()
+        Me.Anuncio4.SuspendLayout()
+        Me.GunaPanel8.SuspendLayout()
+        Me.GunaPanel9.SuspendLayout()
         Me.Anuncio3.SuspendLayout()
         Me.GunaPanel3.SuspendLayout()
         Me.Anuncio2.SuspendLayout()
@@ -67,10 +79,108 @@ Partial Class Home
         'Anuncio4
         '
         Me.Anuncio4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Anuncio4.Location = New System.Drawing.Point(609, 26)
+        Me.Anuncio4.Controls.Add(Me.GunaPanel8)
+        Me.Anuncio4.Controls.Add(Me.GunaPanel9)
+        Me.Anuncio4.Location = New System.Drawing.Point(611, 26)
         Me.Anuncio4.Name = "Anuncio4"
-        Me.Anuncio4.Size = New System.Drawing.Size(197, 400)
+        Me.Anuncio4.Size = New System.Drawing.Size(185, 400)
         Me.Anuncio4.TabIndex = 3
+        '
+        'GunaPanel8
+        '
+        Me.GunaPanel8.BackgroundImage = CType(resources.GetObject("GunaPanel8.BackgroundImage"), System.Drawing.Image)
+        Me.GunaPanel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GunaPanel8.Controls.Add(Me.GunaLabel1)
+        Me.GunaPanel8.Controls.Add(Me.HaloLaunchPC)
+        Me.GunaPanel8.Location = New System.Drawing.Point(26, 204)
+        Me.GunaPanel8.Name = "GunaPanel8"
+        Me.GunaPanel8.Size = New System.Drawing.Size(138, 186)
+        Me.GunaPanel8.TabIndex = 0
+        '
+        'GunaLabel1
+        '
+        Me.GunaLabel1.AutoSize = True
+        Me.GunaLabel1.BackColor = System.Drawing.Color.ForestGreen
+        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GunaLabel1.ForeColor = System.Drawing.Color.White
+        Me.GunaLabel1.Location = New System.Drawing.Point(0, 5)
+        Me.GunaLabel1.Name = "GunaLabel1"
+        Me.GunaLabel1.Size = New System.Drawing.Size(57, 15)
+        Me.GunaLabel1.TabIndex = 66
+        Me.GunaLabel1.Text = "HALO PC"
+        '
+        'HaloLaunchPC
+        '
+        Me.HaloLaunchPC.AnimationHoverSpeed = 0.07!
+        Me.HaloLaunchPC.AnimationSpeed = 0.03!
+        Me.HaloLaunchPC.BaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HaloLaunchPC.BorderColor = System.Drawing.Color.Black
+        Me.HaloLaunchPC.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.HaloLaunchPC.FocusedColor = System.Drawing.Color.Empty
+        Me.HaloLaunchPC.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.HaloLaunchPC.ForeColor = System.Drawing.Color.White
+        Me.HaloLaunchPC.Image = Nothing
+        Me.HaloLaunchPC.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.HaloLaunchPC.ImageSize = New System.Drawing.Size(20, 20)
+        Me.HaloLaunchPC.Location = New System.Drawing.Point(41, 159)
+        Me.HaloLaunchPC.Name = "HaloLaunchPC"
+        Me.HaloLaunchPC.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HaloLaunchPC.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.HaloLaunchPC.OnHoverForeColor = System.Drawing.Color.White
+        Me.HaloLaunchPC.OnHoverImage = Nothing
+        Me.HaloLaunchPC.OnPressedColor = System.Drawing.Color.Black
+        Me.HaloLaunchPC.Size = New System.Drawing.Size(60, 24)
+        Me.HaloLaunchPC.TabIndex = 65
+        Me.HaloLaunchPC.Text = "Launch"
+        Me.HaloLaunchPC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'GunaPanel9
+        '
+        Me.GunaPanel9.BackgroundImage = CType(resources.GetObject("GunaPanel9.BackgroundImage"), System.Drawing.Image)
+        Me.GunaPanel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GunaPanel9.Controls.Add(Me.GunaLabel2)
+        Me.GunaPanel9.Controls.Add(Me.HaloLaunchCE)
+        Me.GunaPanel9.Location = New System.Drawing.Point(26, 12)
+        Me.GunaPanel9.Name = "GunaPanel9"
+        Me.GunaPanel9.Size = New System.Drawing.Size(138, 186)
+        Me.GunaPanel9.TabIndex = 1
+        '
+        'GunaLabel2
+        '
+        Me.GunaLabel2.AutoSize = True
+        Me.GunaLabel2.BackColor = System.Drawing.Color.ForestGreen
+        Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GunaLabel2.ForeColor = System.Drawing.Color.White
+        Me.GunaLabel2.Location = New System.Drawing.Point(0, 5)
+        Me.GunaLabel2.Name = "GunaLabel2"
+        Me.GunaLabel2.Size = New System.Drawing.Size(56, 15)
+        Me.GunaLabel2.TabIndex = 67
+        Me.GunaLabel2.Text = "HALO CE"
+        '
+        'HaloLaunchCE
+        '
+        Me.HaloLaunchCE.AnimationHoverSpeed = 0.07!
+        Me.HaloLaunchCE.AnimationSpeed = 0.03!
+        Me.HaloLaunchCE.BaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HaloLaunchCE.BorderColor = System.Drawing.Color.Black
+        Me.HaloLaunchCE.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.HaloLaunchCE.FocusedColor = System.Drawing.Color.Empty
+        Me.HaloLaunchCE.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.HaloLaunchCE.ForeColor = System.Drawing.Color.White
+        Me.HaloLaunchCE.Image = Nothing
+        Me.HaloLaunchCE.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.HaloLaunchCE.ImageSize = New System.Drawing.Size(20, 20)
+        Me.HaloLaunchCE.Location = New System.Drawing.Point(41, 159)
+        Me.HaloLaunchCE.Name = "HaloLaunchCE"
+        Me.HaloLaunchCE.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HaloLaunchCE.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.HaloLaunchCE.OnHoverForeColor = System.Drawing.Color.White
+        Me.HaloLaunchCE.OnHoverImage = Nothing
+        Me.HaloLaunchCE.OnPressedColor = System.Drawing.Color.Black
+        Me.HaloLaunchCE.Size = New System.Drawing.Size(60, 24)
+        Me.HaloLaunchCE.TabIndex = 64
+        Me.HaloLaunchCE.Text = "Launch"
+        Me.HaloLaunchCE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Anuncio3
         '
@@ -258,6 +368,11 @@ Partial Class Home
         Me.Anuncio1Icon.TabIndex = 5
         Me.Anuncio1Icon.Visible = False
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 1
+        '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -269,6 +384,11 @@ Partial Class Home
         Me.Name = "Home"
         Me.Text = "Home"
         Me.GunaPanel1.ResumeLayout(False)
+        Me.Anuncio4.ResumeLayout(False)
+        Me.GunaPanel8.ResumeLayout(False)
+        Me.GunaPanel8.PerformLayout()
+        Me.GunaPanel9.ResumeLayout(False)
+        Me.GunaPanel9.PerformLayout()
         Me.Anuncio3.ResumeLayout(False)
         Me.GunaPanel3.ResumeLayout(False)
         Me.GunaPanel3.PerformLayout()
@@ -301,4 +421,11 @@ Partial Class Home
     Friend WithEvents Anuncio1Title As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaPanel7 As Guna.UI.WinForms.GunaPanel
     Friend WithEvents Anuncio1Icon As Guna.UI.WinForms.GunaPanel
+    Friend WithEvents GunaPanel8 As Guna.UI.WinForms.GunaPanel
+    Friend WithEvents GunaPanel9 As Guna.UI.WinForms.GunaPanel
+    Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents HaloLaunchPC As Guna.UI.WinForms.GunaButton
+    Friend WithEvents GunaLabel2 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents HaloLaunchCE As Guna.UI.WinForms.GunaButton
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

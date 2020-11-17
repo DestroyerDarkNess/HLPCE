@@ -26,6 +26,10 @@ Partial Class Settingfrm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Settingfrm))
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GunaLabel10 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaGoogleSwitch1 = New Guna.UI.WinForms.GunaGoogleSwitch()
+        Me.GunaPanel7 = New Guna.UI.WinForms.GunaPanel()
+        Me.GunaLabel9 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaButton5 = New Guna.UI.WinForms.GunaButton()
         Me.GunaLabel8 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaComboBox2 = New Guna.UI.WinForms.GunaComboBox()
@@ -34,6 +38,7 @@ Partial Class Settingfrm
         Me.GunaButton3 = New Guna.UI.WinForms.GunaButton()
         Me.GunaButton2 = New Guna.UI.WinForms.GunaButton()
         Me.GunaPanel2 = New Guna.UI.WinForms.GunaPanel()
+        Me.GunaButton6 = New Guna.UI.WinForms.GunaButton()
         Me.GunaButton4 = New Guna.UI.WinForms.GunaButton()
         Me.PCdirTextBox1 = New Guna.UI.WinForms.GunaTextBox()
         Me.GunaLabel6 = New Guna.UI.WinForms.GunaLabel()
@@ -58,9 +63,9 @@ Partial Class Settingfrm
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BoosterToolTip1 = New HALOCELauncher.BoosterToolTip()
-        Me.GunaButton6 = New Guna.UI.WinForms.GunaButton()
         Me.GunaPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GunaPanel7.SuspendLayout()
         Me.GunaPanel6.SuspendLayout()
         Me.GunaPanel2.SuspendLayout()
         Me.GunaPanel5.SuspendLayout()
@@ -80,6 +85,9 @@ Partial Class Settingfrm
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.GunaLabel10)
+        Me.Panel1.Controls.Add(Me.GunaGoogleSwitch1)
+        Me.Panel1.Controls.Add(Me.GunaPanel7)
         Me.Panel1.Controls.Add(Me.GunaButton5)
         Me.Panel1.Controls.Add(Me.GunaLabel8)
         Me.Panel1.Controls.Add(Me.GunaComboBox2)
@@ -90,6 +98,47 @@ Partial Class Settingfrm
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(357, 414)
         Me.Panel1.TabIndex = 49
+        '
+        'GunaLabel10
+        '
+        Me.GunaLabel10.AutoSize = True
+        Me.GunaLabel10.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel10.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GunaLabel10.Location = New System.Drawing.Point(8, 247)
+        Me.GunaLabel10.Name = "GunaLabel10"
+        Me.GunaLabel10.Size = New System.Drawing.Size(71, 15)
+        Me.GunaLabel10.TabIndex = 66
+        Me.GunaLabel10.Text = "Multi-Client"
+        '
+        'GunaGoogleSwitch1
+        '
+        Me.GunaGoogleSwitch1.BaseColor = System.Drawing.SystemColors.Control
+        Me.GunaGoogleSwitch1.CheckedOffColor = System.Drawing.Color.DarkGray
+        Me.GunaGoogleSwitch1.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaGoogleSwitch1.FillColor = System.Drawing.Color.White
+        Me.GunaGoogleSwitch1.Location = New System.Drawing.Point(83, 246)
+        Me.GunaGoogleSwitch1.Name = "GunaGoogleSwitch1"
+        Me.GunaGoogleSwitch1.Size = New System.Drawing.Size(38, 19)
+        Me.GunaGoogleSwitch1.TabIndex = 65
+        '
+        'GunaPanel7
+        '
+        Me.GunaPanel7.Controls.Add(Me.GunaLabel9)
+        Me.GunaPanel7.Location = New System.Drawing.Point(0, 206)
+        Me.GunaPanel7.Name = "GunaPanel7"
+        Me.GunaPanel7.Size = New System.Drawing.Size(357, 26)
+        Me.GunaPanel7.TabIndex = 64
+        '
+        'GunaLabel9
+        '
+        Me.GunaLabel9.AutoSize = True
+        Me.GunaLabel9.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel9.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GunaLabel9.Location = New System.Drawing.Point(8, 5)
+        Me.GunaLabel9.Name = "GunaLabel9"
+        Me.GunaLabel9.Size = New System.Drawing.Size(102, 15)
+        Me.GunaLabel9.TabIndex = 3
+        Me.GunaLabel9.Text = "Special Functions "
         '
         'GunaButton5
         '
@@ -244,6 +293,31 @@ Partial Class Settingfrm
         Me.GunaPanel2.Name = "GunaPanel2"
         Me.GunaPanel2.Size = New System.Drawing.Size(430, 414)
         Me.GunaPanel2.TabIndex = 48
+        '
+        'GunaButton6
+        '
+        Me.GunaButton6.AnimationHoverSpeed = 0.07!
+        Me.GunaButton6.AnimationSpeed = 0.03!
+        Me.GunaButton6.BaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaButton6.BorderColor = System.Drawing.Color.Black
+        Me.GunaButton6.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.GunaButton6.FocusedColor = System.Drawing.Color.Empty
+        Me.GunaButton6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GunaButton6.ForeColor = System.Drawing.Color.White
+        Me.GunaButton6.Image = Nothing
+        Me.GunaButton6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.GunaButton6.ImageSize = New System.Drawing.Size(20, 20)
+        Me.GunaButton6.Location = New System.Drawing.Point(263, 240)
+        Me.GunaButton6.Name = "GunaButton6"
+        Me.GunaButton6.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaButton6.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.GunaButton6.OnHoverForeColor = System.Drawing.Color.White
+        Me.GunaButton6.OnHoverImage = Nothing
+        Me.GunaButton6.OnPressedColor = System.Drawing.Color.Black
+        Me.GunaButton6.Size = New System.Drawing.Size(108, 26)
+        Me.GunaButton6.TabIndex = 64
+        Me.GunaButton6.Text = "Force FullScreen"
+        Me.GunaButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'GunaButton4
         '
@@ -448,6 +522,8 @@ Partial Class Settingfrm
         Me.GunaCheckBox2.Size = New System.Drawing.Size(87, 20)
         Me.GunaCheckBox2.TabIndex = 51
         Me.GunaCheckBox2.Text = "Screenshot"
+        Me.BoosterToolTip1.SetToolTip(Me.GunaCheckBox2, "Enables the ""Print Screen"" key to generate TGA format screenshots in Halo's scree" & _
+        "nshots directory.")
         '
         'GunaCheckBox1
         '
@@ -561,31 +637,6 @@ Partial Class Settingfrm
         Me.BoosterToolTip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.BoosterToolTip1.OwnerDraw = True
         '
-        'GunaButton6
-        '
-        Me.GunaButton6.AnimationHoverSpeed = 0.07!
-        Me.GunaButton6.AnimationSpeed = 0.03!
-        Me.GunaButton6.BaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaButton6.BorderColor = System.Drawing.Color.Black
-        Me.GunaButton6.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.GunaButton6.FocusedColor = System.Drawing.Color.Empty
-        Me.GunaButton6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GunaButton6.ForeColor = System.Drawing.Color.White
-        Me.GunaButton6.Image = Nothing
-        Me.GunaButton6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.GunaButton6.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaButton6.Location = New System.Drawing.Point(263, 240)
-        Me.GunaButton6.Name = "GunaButton6"
-        Me.GunaButton6.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaButton6.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.GunaButton6.OnHoverForeColor = System.Drawing.Color.White
-        Me.GunaButton6.OnHoverImage = Nothing
-        Me.GunaButton6.OnPressedColor = System.Drawing.Color.Black
-        Me.GunaButton6.Size = New System.Drawing.Size(108, 26)
-        Me.GunaButton6.TabIndex = 64
-        Me.GunaButton6.Text = "Force FullScreen"
-        Me.GunaButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'Settingfrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -604,6 +655,8 @@ Partial Class Settingfrm
         Me.GunaPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.GunaPanel7.ResumeLayout(False)
+        Me.GunaPanel7.PerformLayout()
         Me.GunaPanel6.ResumeLayout(False)
         Me.GunaPanel6.PerformLayout()
         Me.GunaPanel2.ResumeLayout(False)
@@ -652,4 +705,8 @@ Partial Class Settingfrm
     Friend WithEvents GunaComboBox2 As Guna.UI.WinForms.GunaComboBox
     Friend WithEvents GunaButton5 As Guna.UI.WinForms.GunaButton
     Friend WithEvents GunaButton6 As Guna.UI.WinForms.GunaButton
+    Friend WithEvents GunaLabel10 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaGoogleSwitch1 As Guna.UI.WinForms.GunaGoogleSwitch
+    Friend WithEvents GunaPanel7 As Guna.UI.WinForms.GunaPanel
+    Friend WithEvents GunaLabel9 As Guna.UI.WinForms.GunaLabel
 End Class

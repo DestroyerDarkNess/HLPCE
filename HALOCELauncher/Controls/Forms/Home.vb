@@ -12,7 +12,7 @@ Public Class Home
                   : Catch : End Try
 
         SetStyle(ControlStyles.SupportsTransparentBackColor, True)
-        Me.BackColor = Color.Transparent
+       Me.BackColor = Color.Transparent
         Me.Refresh()
         StartC()
     End Sub
@@ -335,5 +335,29 @@ Public Class Home
     End Sub
 
 #End Region
+
+    
+    Private Sub HaloLaunchCE_Click(sender As Object, e As EventArgs) Handles HaloLaunchCE.Click
+        Dim NewLauncher As New Core.Launcher(My.Settings.GameDirCE)
+        NewLauncher.Launch()
+    End Sub
+
+    Private Sub HaloLaunchPC_Click(sender As Object, e As EventArgs) Handles HaloLaunchPC.Click
+        Dim NewLauncher As New Core.Launcher(My.Settings.GameDirCE)
+        NewLauncher.Launch()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If My.Settings.GameDirCE = "" Then
+            HaloLaunchCE.Enabled = False
+        Else
+            HaloLaunchCE.Enabled = True
+        End If
+        If My.Settings.GameDirCE = "" Then
+            HaloLaunchPC.Enabled = False
+        Else
+            HaloLaunchPC.Enabled = True
+        End If
+    End Sub
 
 End Class

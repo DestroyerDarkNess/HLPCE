@@ -18,15 +18,22 @@ Namespace Core
             Else
                 GameDir = GameDirEx
             End If
+            My.Settings.OldGameDir = GameDir
             GameProc = IO.Path.GetFileName(GameDir)
             AddHandler Timer1.Tick, AddressOf Timer1_Tick
         End Sub
 
-        Public Sub Launch(ByVal IpAdress As String, Optional ByVal Password As String = "")
+        Public Sub Launch(Optional ByVal IpAdress As String = "", Optional ByVal Password As String = "")
             Dim Larguments As String = String.Empty
             Dim Arguments As String = GetArguments()
             If My.Settings.LaunchMode = 0 Then Larguments = " -window "
-            Larguments += " -connect " & IpAdress & " "
+            If Not IpAdress = "" Then
+                My.Settings.OldIPAdress = IpAdress
+                Larguments += " -connect " & IpAdress & " "
+            Else
+                My.Settings.OldIPAdress = ""
+            End If
+            My.Settings.Save()
             If Not Password = "" Then
                 Larguments += Arguments & " -password " & Password
             Else
@@ -34,21 +41,42 @@ Namespace Core
             End If
 
             If IO.File.Exists(GameDir) = True Then
-                Dim p As New Process
-                p.StartInfo.WorkingDirectory = (IO.Path.GetDirectoryName(GameDir))
-                p.StartInfo.FileName = IO.Path.GetFileName(GameDir)
-                p.StartInfo.Arguments = Larguments
-                p.Start()
-                p.WaitForInputIdle()
+                If My.Settings.MultiLauncher = True Then
+                    If IO.File.Exists("Multiclient.dll") = False Then
+                        MsgBox("The Multiclient.dll file was not found.")
+                        Exit Sub
+                    End If
+
+                    Dim MultiClient As Boolean = Multilauncher(GameDir, Larguments)
+
+                Else
+                    Dim p As New Process
+                    p.StartInfo.WorkingDirectory = (IO.Path.GetDirectoryName(GameDir))
+                    p.StartInfo.FileName = IO.Path.GetFileName(GameDir)
+                    p.StartInfo.Arguments = Larguments
+                    p.Start()
+                    p.WaitForInputIdle()
+                End If
+
                 If My.Settings.LaunchMode = 0 Then Timer1.Enabled = True
             End If
         End Sub
 
+        <DllImport("Multiclient.dll", EntryPoint:="multi_launch", CallingConvention:=CallingConvention.StdCall)>
+        Public Shared Function MlaunchEx(ByVal halodir As String, ByVal arguments As String) As Integer
+        End Function
+
+        Public Function Multilauncher(ByVal halodir As String, ByVal argument As String) As Boolean
+            Dim result As Integer = MlaunchEx(halodir, argument)
+            Return CBool(result)
+        End Function
+
 
         Dim ProcC As Integer = 0
         Dim Procede As Boolean = False
+
         Private Sub Timer1_Tick(sender As Object, e As EventArgs)
-           Dim procs As Process() = Process.GetProcesses()
+            Dim procs As Process() = Process.GetProcesses()
 
             Dim ProcessNameEX As String = IO.Path.GetFileNameWithoutExtension(GameProc)
             Dim processcount As Integer = procs.Count
@@ -119,7 +147,6 @@ Namespace Core
         End Sub
 
 #End Region
-
 
 #Region " Check FakeFullscreen "
 

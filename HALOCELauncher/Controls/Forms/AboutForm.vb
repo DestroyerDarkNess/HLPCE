@@ -2,11 +2,11 @@
 
 Public Class AboutForm
 
-    Private WelcomeMessage As String = "----------Delete"
+    Private WelcomeMessage As String = "Ego sum Deus ex spatio, tempore, Energy."
 
     Public Shared ReadOnly _textToDisplay As String =
 <a><![CDATA[ Create By EternalSoft
-             HALO Launcher for CE and PC | Version 1.0.3
+             HALO Launcher for CE and PC | Version 1.0.5
                 
              Contact Info : 
                  Email: s4lsalsoft@gmail.com

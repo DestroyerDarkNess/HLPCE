@@ -39,6 +39,7 @@ Partial Class Form1
         Me.nav_mods = New Guna.UI.WinForms.GunaAdvenceButton()
         Me.nav_servers = New Guna.UI.WinForms.GunaAdvenceButton()
         Me.nav_home = New Guna.UI.WinForms.GunaAdvenceButton()
+        Me.CrashMonitor = New System.Windows.Forms.Timer(Me.components)
         Me.PanelFX1.SuspendLayout()
         CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -370,6 +371,11 @@ Partial Class Form1
         Me.nav_home.Text = "Home"
         Me.nav_home.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'CrashMonitor
+        '
+        Me.CrashMonitor.Enabled = True
+        Me.CrashMonitor.Interval = 1
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -405,5 +411,6 @@ Partial Class Form1
     Friend WithEvents GunaCirclePictureBox1 As Guna.UI.WinForms.GunaCirclePictureBox
     Friend WithEvents GunaControlBox2 As Guna.UI.WinForms.GunaControlBox
     Friend WithEvents MonitorTimer1 As System.Windows.Forms.Timer
+    Friend WithEvents CrashMonitor As System.Windows.Forms.Timer
 
 End Class

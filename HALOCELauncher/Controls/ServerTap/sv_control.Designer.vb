@@ -72,7 +72,7 @@ Partial Class sv_control
         Me.AnimaContextMenuStrip1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.AnimaContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConnectToolStripMenuItem, Me.ConnectWithHALOPCToolStripMenuItem, Me.ToolStripSeparator1, Me.AddToFavoritesToolStripMenuItem, Me.AddAllServersToFavoritesToolStripMenuItem, Me.DeleteServerToolStripMenuItem, Me.RefreshServerToolStripMenuItem, Me.ToolStripSeparator2, Me.CopyServerInfoToolStripMenuItem, Me.CreateAndCopyServerInviteToolStripMenuItem})
         Me.AnimaContextMenuStrip1.Name = "AnimaContextMenuStrip1"
-        Me.AnimaContextMenuStrip1.Size = New System.Drawing.Size(233, 192)
+        Me.AnimaContextMenuStrip1.Size = New System.Drawing.Size(233, 214)
         '
         'ConnectToolStripMenuItem
         '
@@ -112,7 +112,7 @@ Partial Class sv_control
         Me.DeleteServerToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.DeleteServerToolStripMenuItem.Name = "DeleteServerToolStripMenuItem"
         Me.DeleteServerToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
-        Me.DeleteServerToolStripMenuItem.Text = "Delete Server"
+        Me.DeleteServerToolStripMenuItem.Text = "Delete Server To Favorites"
         '
         'RefreshServerToolStripMenuItem
         '

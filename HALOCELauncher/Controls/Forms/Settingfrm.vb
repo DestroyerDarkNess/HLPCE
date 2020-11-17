@@ -87,6 +87,7 @@ Public Class Settingfrm
         Else
             PCdirTextBox1.Text = My.Settings.GameDirPC
         End If
+        GunaGoogleSwitch1.Checked = My.Settings.MultiLauncher
         GunaCheckBox1.Checked = My.Settings.ConsoleC
         GunaCheckBox2.Checked = My.Settings.ScreenshotC
         GunaCheckBox3.Checked = My.Settings.devC
@@ -254,7 +255,6 @@ Public Class Settingfrm
         My.Settings.Save()
     End Sub
 
-   
     Private Sub GunaComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GunaComboBox2.SelectedIndexChanged
         Dim Slect As Integer = GunaComboBox2.SelectedIndex
         Select Case Slect
@@ -284,4 +284,8 @@ Public Class Settingfrm
         Next
     End Sub
 
+    Private Sub GunaGoogleSwitch1_CheckedChanged(sender As Object, e As EventArgs) Handles GunaGoogleSwitch1.CheckedChanged
+        My.Settings.MultiLauncher = GunaGoogleSwitch1.Checked
+        My.Settings.Save()
+    End Sub
 End Class

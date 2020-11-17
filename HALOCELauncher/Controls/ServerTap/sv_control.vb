@@ -113,11 +113,19 @@ Public Class sv_control
         Me.BackColor = Color.Transparent
         Pinglbl.Text = ""
         If _Isfavorites = True Then
-            Me.AnimaContextMenuStrip1.Items.Item(2).Visible = False
-            Me.AnimaContextMenuStrip1.Items.Item(3).Visible = False
+            ' Me.AnimaContextMenuStrip1.Items.Item(2).Visible = False
+            ' Me.AnimaContextMenuStrip1.Items.Item(3).Visible = False
+            Me.AddToFavoritesToolStripMenuItem.Visible = False
+            Me.AddAllServersToFavoritesToolStripMenuItem.Visible = False
+            Me.DeleteServerToolStripMenuItem.Visible = True
+            Me.RefreshServerToolStripMenuItem.Visible = False ' BUG
         Else
-            Me.AnimaContextMenuStrip1.Items.Item(2).Visible = True
-            Me.AnimaContextMenuStrip1.Items.Item(3).Visible = False
+            Me.AddToFavoritesToolStripMenuItem.Visible = True
+            Me.AddAllServersToFavoritesToolStripMenuItem.Visible = False 'BUG (add all servers to favorites list)
+            Me.DeleteServerToolStripMenuItem.Visible = False
+            Me.RefreshServerToolStripMenuItem.Visible = False ' BUG
+            ' Me.AnimaContextMenuStrip1.Items.Item(2).Visible = True
+            ' Me.AnimaContextMenuStrip1.Items.Item(3).Visible = False
         End If
         Me.UpdateValues()
         HandlesSub()

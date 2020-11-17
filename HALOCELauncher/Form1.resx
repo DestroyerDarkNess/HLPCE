@@ -758,6 +758,9 @@
         ayhNPj+1Z/pR6ZfWdoRYse1PNe7U9RNycVg5z7l/Yt1vPFNf0f/Z
 </value>
   </data>
+  <metadata name="CrashMonitor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>156, 20</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIAB2kQAAZgAAAICAAAABACAAKAgBANyRAABAQAAAAQAgAChCAAAEmgEAMDAAAAEA

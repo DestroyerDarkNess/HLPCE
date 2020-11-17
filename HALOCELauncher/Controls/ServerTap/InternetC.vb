@@ -30,6 +30,7 @@ Public Class InternetC
             Dim PointX As Integer = (PanelContainer.Width / 2) - (ControlLoader.Width - 90)
             Dim PointY As Integer = (PanelContainer.Height / 2) - (ControlLoader.Height - 20)
             ControlLoader.Location = New Point(PointX, PointY)
+            ControlLoader.BringToFront()
         Else
             For Each childControl In PanelContainer.Controls
                 If TypeOf childControl Is LoadingC Then
@@ -203,6 +204,7 @@ Public Class InternetC
         Dim CurrentMax As Integer = GunaVScrollBar1.Maximum
         Dim Porcentage As Integer = (CurrentValue * 100) / CurrentMax
         If Porcentage > 90 Then
+            ShowLoading(True)
             ServerStartListing()
         End If
     End Sub
@@ -270,7 +272,6 @@ Public Class InternetC
             End If
         Next
     End Sub
-
 
     Private _Showing As String = ""
     Private _avrchar As Integer = 0
@@ -352,4 +353,5 @@ Public Class InternetC
     Private Sub RefreshSeverListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RefreshSeverListToolStripMenuItem.Click
         UpdateAll()
     End Sub
+
 End Class

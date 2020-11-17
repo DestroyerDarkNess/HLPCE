@@ -95,6 +95,12 @@
     <Compile Include="Controls\Forms\AboutForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Controls\Forms\CrashDialog.Designer.vb">
+      <DependentUpon>CrashDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\CrashDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Controls\Forms\Home.Designer.vb">
       <DependentUpon>Home.vb</DependentUpon>
     </Compile>
@@ -117,6 +123,12 @@
       <DependentUpon>Settingfrm.vb</DependentUpon>
     </Compile>
     <Compile Include="Controls\Forms\Settingfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\Toolsfrm.Designer.vb">
+      <DependentUpon>Toolsfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\Toolsfrm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controls\HelpersXylos.vb">
@@ -164,6 +176,10 @@
     </Compile>
     <Compile Include="Core\AntiFlicker\IBufferedControl.vb" />
     <Compile Include="Core\AntiFlicker\Win32FX.vb" />
+    <Compile Include="Core\CrashManager\DxNotify.vb" />
+    <Compile Include="Core\CrashManager\HaloCrashHook.vb" />
+    <Compile Include="Core\CrashManager\WindowHook.vb" />
+    <Compile Include="Core\DX9Overlay.vb" />
     <Compile Include="Core\FakeFullScreen\SetWindowState.vb" />
     <Compile Include="Core\FakeFullScreen\SetWindowStyle.vb" />
     <Compile Include="Core\Launcher.vb" />
@@ -219,6 +235,9 @@
     <EmbeddedResource Include="Controls\Forms\AboutForm.resx">
       <DependentUpon>AboutForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\CrashDialog.resx">
+      <DependentUpon>CrashDialog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Forms\Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Forms\Settingfrm.resx">
       <DependentUpon>Settingfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\Toolsfrm.resx">
+      <DependentUpon>Toolsfrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ServerTap\AddCustomServer.resx">
       <DependentUpon>AddCustomServer.vb</DependentUpon>
@@ -286,7 +308,9 @@
   <ItemGroup>
     <Content Include="image.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controls\ToolsTap\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

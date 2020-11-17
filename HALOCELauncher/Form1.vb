@@ -17,6 +17,7 @@ Public Class Form1
 
     Private HomeControl As Form = New Home With {.TopLevel = False}
     Private ServerControl As Servers = New Servers With {.TopLevel = False}
+    Private ToolsControl As Form = New Toolsfrm With {.TopLevel = False}
     Private ModsControl As Form = New Modsfrm With {.TopLevel = False}
     Private SettingsControl As Form = New Settingfrm With {.TopLevel = False}
 
@@ -27,7 +28,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        DeleteLog()
         Try : AddHandler Application.ThreadException, AddressOf Application_Exception_Handler _
                  : Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException, False) _
                      : Catch : End Try
@@ -35,7 +36,7 @@ Public Class Form1
         Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
 
         If IsAdministrator = True Then
-            StartMonitorig()
+            ' StartMonitorig()
         Else
             MsgBox("Please open with administrator rights!")
             End
@@ -43,6 +44,30 @@ Public Class Form1
 
         StartControls()
     End Sub
+
+#Region " Anti-Crash "
+
+    Dim Hmonitor As HaloCrashHook = New HaloCrashHook
+    Dim ShowAD As Boolean = False
+
+    Private Sub CrashMonitor_Tick(sender As Object, e As EventArgs) Handles CrashMonitor.Tick
+
+        If Hmonitor.ResultState = HaloCrashHook.ResultType.Notify Then
+            If ShowAD = False Then
+                Dim AdNoti As New Core.CrashManager.DxNotify(Hmonitor.ResultText)
+                Hmonitor.ResetClass()
+                ShowAD = True
+            End If
+        ElseIf Hmonitor.ResultState = HaloCrashHook.ResultType.IError Then
+            CrashDialog.ShowDialog()
+            Hmonitor.ResetClass()
+        ElseIf Hmonitor.ResultState = HaloCrashHook.ResultType.Indeterminate Then
+            ShowAD = False
+        End If
+
+    End Sub
+
+#End Region
 
     Private Sub Application_Exception_Handler(ByVal sender As Object, ByVal e As System.Threading.ThreadExceptionEventArgs)
         Dim ex As Exception = CType(e.Exception, Exception)
@@ -65,6 +90,7 @@ Public Class Form1
     Private Sub LoadForms()
         AddShowForm(HomeControl)
         AddShowForm(ServerControl)
+        AddShowForm(ToolsControl)
         AddShowForm(ModsControl)
         AddShowForm(SettingsControl)
     End Sub
@@ -92,6 +118,11 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub nav_tools_CheckedChanged(sender As Object, e As EventArgs) Handles nav_tools.CheckedChanged
+        If nav_tools.Checked Then
+            ToolsControl.BringToFront()
+        End If
+    End Sub
 
     Private Sub nav_mods_CheckedChanged(sender As Object, e As EventArgs) Handles nav_mods.CheckedChanged
         If nav_mods.Checked Then
@@ -176,13 +207,17 @@ Public Class Form1
     End Sub
 
     Private Function IsGameOpen() As Boolean
-        Dim pName As String = IO.Path.GetFileNameWithoutExtension(My.Settings.GameDirCE)
+        Dim pName1 As String = IO.Path.GetFileNameWithoutExtension(My.Settings.GameDirCE)
+        Dim pName2 As String = IO.Path.GetFileNameWithoutExtension(My.Settings.GameDirPC)
         Dim psList() As Process
         Try
             psList = Process.GetProcesses()
 
             For Each p As Process In psList
-                If (pName = p.ProcessName) Then
+                If (pName1 = p.ProcessName) Then
+                    Return True
+                End If
+                If (pName2 = p.ProcessName) Then
                     Return True
                 End If
             Next p
@@ -295,7 +330,7 @@ Public Class Form1
 
         If Not ResultScan.ProcessResult = String.Empty Then
             Ending()
-           ResultScan.Finish = True
+            ResultScan.Finish = True
             MonitorTimer1.Enabled = False
         End If
 
@@ -325,7 +360,7 @@ Public Class Form1
     End Sub
 
     Private Sub Ending()
-       End
+        End
     End Sub
 
 #End Region
