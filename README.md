@@ -41,6 +41,11 @@ If you like my work and want to support it, then please consider to deposit a do
 - No Joystick
 - Safe Mode
 - It is very, very Light.
+- Added Multi-client Option.[It allows you to open several instances of HALO] . 
+- Added Ability to Launch game from the launcher. [I mean to open the game directly for those who do not want to open a server]
+- Added superficial handling of Error Messages. [Crash Manager]
+
+
 
  ## Contributors
 - Destroyer : Creator and Developer.  / Discord : Destroyer#8328
@@ -48,7 +53,7 @@ If you like my work and want to support it, then please consider to deposit a do
 
   ## Special thanks :
 - [ElektroStudios](https://github.com/ElektroStudios): For its Snippet and other Functions.
-
+- Thanks to [Oxide] for the Halo Multi-Client source code.
 
  ## Preview :
 
@@ -59,4 +64,12 @@ If you like my work and want to support it, then please consider to deposit a do
 ![Preview3](https://i.ibb.co/PjBR29X/Preview2a.png)
 
 ![Preview4](https://i.ibb.co/mH4j0LG/preview1a.png)
+
+- HALO MultiClient Preview:
+
+![PreviewMultiClient](https://i.ibb.co/c3m4F6L/multi-Client.png)
+
+- Fast GAME Launch :
+
+![PreviewMultiClient](https://i.ibb.co/0mp68Fp/srta.png)
 
